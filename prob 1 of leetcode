@@ -1,0 +1,32 @@
+#https://leetcode.com/problems/two-sum/#/description
+class Solution:
+    def twoSum(self,nums,target):
+        d ={} #it is a set
+        m = [] #it is a list
+
+        for i,n in enumerate(nums):
+            if n in d:
+                m = (d[n],i)
+                print(m)
+                return m
+            else:
+                d[target - n] = i
+
+
+e = solution()
+r = [3,3,6,9]
+e.twoSum(r,6)
+
+
+# class Solution:
+#     # @return a tuple, (index1, index2)
+
+#     def twoSum(self, num, target):
+#         map = {}
+#         for i in range(len(num)):
+#             if num[i] not in map:
+#                 map[target - num[i]] = i + 1
+#             else:
+#                 return map[num[i]], i + 1
+#
+#         return -1, -1
