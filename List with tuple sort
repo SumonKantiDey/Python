@@ -1,0 +1,23 @@
+np = [(1,2,10),(4,12,116),(7,8,9,20)] #tumple in list short check always first value
+ln = len(np)
+max_value = max([(np[i],i)for i in range(ln)])
+print(max_value) #it is tuple
+
+max_value,idx = max([(np[i],i)for i in range(ln)]) #here max_value for np[i] , idx for i like tuple
+print(np[idx])
+
+nn = 0
+
+for i in range(ln):
+    mx = max(np[i])
+    if(nn <  mx):
+        idx = np[i].index(mx)
+        pp = mx,i,idx
+        nn = mx
+    else:
+        continue
+
+print(pp) # it is tuple max value with i and j
+
+
+
